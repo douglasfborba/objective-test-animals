@@ -3,6 +3,8 @@ package br.com.objective.test.animals.presenter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 import br.com.objective.test.animals.model.Animal;
 import br.com.objective.test.animals.model.Node;
 import br.com.objective.test.animals.view.View;
@@ -34,9 +36,9 @@ public class Presenter implements ActionListener {
 		Node<Object> current = root;
 		while (!current.isLeaf()) {
 			int input = view.showConfirmDialog("Confirm", "O Animal que você pensou " + current.getItem() + "?");
-			if (input == 0) {
+			if (input == JOptionPane.YES_OPTION) {
 				current = current.getLeft();
-			} else if (input == 1) {
+			} else if (input == JOptionPane.NO_OPTION) {
 				current = current.getRight();
 			} else {
 				break;
@@ -47,9 +49,9 @@ public class Presenter implements ActionListener {
 
 	private void checkAnimal(Node<Object> current) {
 		int input = view.showConfirmDialog("Confirm", "O animal que você pensou é " + current.getItem() + "?");
-		if (input == 0) {
+		if (input == JOptionPane.YES_OPTION) {
 			view.showMessageDialog("Jogo dos Animais", "Acertei de novo!");
-		} else if (input == 1) {
+		} else if (input == JOptionPane.NO_OPTION) {
 			addNode(current);
 		}
 	}
