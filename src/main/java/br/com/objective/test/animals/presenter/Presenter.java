@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import br.com.objective.test.animals.model.Animal;
 import br.com.objective.test.animals.model.Node;
 import br.com.objective.test.animals.view.View;
 
@@ -18,9 +17,9 @@ import br.com.objective.test.animals.view.View;
 
 public class Presenter implements ActionListener {
 	private View view;
-	private Node<Object> root;
+	private Node<String> root;
 
-	public Presenter(Node<Object> root) {
+	public Presenter(Node<String> root) {
 		this.root = root;
 	}
 
@@ -33,7 +32,7 @@ public class Presenter implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		Node<Object> current = root;
+		Node<String> current = root;
 		while (!current.isLeaf()) {
 			int input = view.showConfirmDialog("Confirm", "O Animal que você pensou " + current.getItem() + "?");
 			if (input == JOptionPane.YES_OPTION) {
@@ -47,7 +46,7 @@ public class Presenter implements ActionListener {
 		checkAnimal(current);
 	}
 
-	private void checkAnimal(Node<Object> current) {
+	private void checkAnimal(Node<String> current) {
 		int input = view.showConfirmDialog("Confirm", "O animal que você pensou é " + current.getItem() + "?");
 		if (input == JOptionPane.YES_OPTION) {
 			view.showMessageDialog("Jogo dos Animais", "Acertei de novo!");
@@ -56,14 +55,12 @@ public class Presenter implements ActionListener {
 		}
 	}
 
-	private void addNode(Node<Object> current) {
+	private void addNode(Node<String> current) {
 		String name = view.showInputDialog("Desisto", "Qual o animal que você pensou?");
 		String tip = view.showInputDialog("Complete", "Um(a) " + name + "_____ mas um(a) Tubarão não.");
 
-		Animal animal = new Animal(name);
-
-		current.setRight(new Node<Object>(current.getItem()));
-		current.setLeft(new Node<Object>(animal));
+		current.setRight(new Node<String>(current.getItem()));
+		current.setLeft(new Node<String>(name));
 		current.setItem(tip);
 	}
 }
