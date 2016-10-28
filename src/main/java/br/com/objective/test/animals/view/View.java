@@ -2,13 +2,16 @@ package br.com.objective.test.animals.view;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.net.URL;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import br.com.objective.test.animals.App;
 import br.com.objective.test.animals.presenter.Presenter;
 
 /**
@@ -20,7 +23,7 @@ import br.com.objective.test.animals.presenter.Presenter;
 
 public class View extends JFrame {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Presenter presenter;
 	private JPanel header;
 	private JPanel footer;
@@ -28,6 +31,11 @@ public class View extends JFrame {
 	public View(Presenter presenter) {
 		this.presenter = presenter;
 		this.presenter.setView(this);
+
+		URL iconURL = App.class.getClassLoader().getResource("images/icon.png");
+
+		ImageIcon icon = new ImageIcon(iconURL);
+		this.setIconImage(icon.getImage());
 
 		JLabel label = new JLabel("Pense em um animal");
 
