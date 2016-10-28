@@ -12,6 +12,15 @@
 	</properties>
 
 	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -19,6 +28,20 @@
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>br.com.objective.test.animals.App</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
