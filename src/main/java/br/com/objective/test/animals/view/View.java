@@ -32,9 +32,9 @@ public class View extends JFrame {
 		this.presenter = presenter;
 		this.presenter.setView(this);
 
-		URL iconURL = App.class.getClassLoader().getResource("images/icon.png");
+		URL url = App.class.getClassLoader().getResource("images/icon.png");
 
-		ImageIcon icon = new ImageIcon(iconURL);
+		ImageIcon icon = new ImageIcon(url);
 		this.setIconImage(icon.getImage());
 
 		JLabel label = new JLabel("Pense em um animal");
