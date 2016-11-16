@@ -57,7 +57,8 @@ public class Presenter implements ActionListener {
 
 	private void addNode(Node<String> current) {
 		String name = view.showInputDialog("Desisto", "Qual o animal que você pensou?");
-		String tip = view.showInputDialog("Complete", "Um(a) " + name + "_____ mas um(a) Tubarão não.");
+		String tip = view.showInputDialog("Complete",
+				"Um(a) " + name + "_____ mas um(a) " + current.getItem() + " não.");
 
 		current.setRight(new Node<String>(current.getItem()));
 		current.setLeft(new Node<String>(name));
