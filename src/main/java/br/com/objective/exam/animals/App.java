@@ -1,7 +1,7 @@
 package br.com.objective.exam.animals;
 
-import br.com.objective.exam.animals.model.Node;
 import br.com.objective.exam.animals.model.Animal;
+import br.com.objective.exam.animals.model.Node;
 import br.com.objective.exam.animals.model.Question;
 import br.com.objective.exam.animals.presenter.Presenter;
 import br.com.objective.exam.animals.view.View;
@@ -23,4 +23,5 @@ public class App {
 		final View view = new View();
 		new Presenter(view, root);
 	}
+	
 }

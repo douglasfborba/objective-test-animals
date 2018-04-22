@@ -1,18 +1,26 @@
 package br.com.objective.exam.animals.presenter;
 
+import static br.com.objective.exam.animals.util.GlobalConstants.APP_TITLE;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_MESSAGE_CONFIRM_ANIMAL;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_MESSAGE_CONFIRM_QUESTION;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_MESSAGE_INFO_MATCH;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_MESSAGE_INPUT_ANIMAL;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_MESSAGE_INPUT_COMPLETE;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_TITLE_COMPLETE;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_TITLE_CONFIRM;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_TITLE_FAIL;
+import static javax.swing.JOptionPane.NO_OPTION;
+import static javax.swing.JOptionPane.YES_OPTION;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import br.com.objective.exam.animals.model.Animal;
 import br.com.objective.exam.animals.model.INode;
 import br.com.objective.exam.animals.model.Node;
 import br.com.objective.exam.animals.model.Question;
 import br.com.objective.exam.animals.util.Messages;
 import br.com.objective.exam.animals.view.View;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import static br.com.objective.exam.animals.util.GlobalConstants.*;
-import static javax.swing.JOptionPane.NO_OPTION;
-import static javax.swing.JOptionPane.YES_OPTION;
 
 /**
  * 

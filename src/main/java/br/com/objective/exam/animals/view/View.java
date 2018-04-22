@@ -1,5 +1,8 @@
 package br.com.objective.exam.animals.view;
 
+import static br.com.objective.exam.animals.util.GlobalConstants.DEFAULT_ICON;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_BUTTON_LABEL_OK;
+import static br.com.objective.exam.animals.util.GlobalConstants.DIALOG_MESSAGE_INFO_ANIMAL;
 import static java.awt.BorderLayout.NORTH;
 import static java.awt.BorderLayout.SOUTH;
 import static java.awt.FlowLayout.CENTER;
@@ -14,11 +17,14 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.net.URL;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import br.com.objective.exam.animals.App;
 import br.com.objective.exam.animals.util.Messages;
-import static br.com.objective.exam.animals.util.GlobalConstants.*;
 
 /**
  * 
