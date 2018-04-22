@@ -9,15 +9,15 @@ package br.com.objective.exam.animals.model;
 
 public interface INode {
 
-	public abstract Content getContent();
-	public abstract void setContent(Content content);
+	Content getContent();
+	void setContent(Content content);
 
-	public abstract INode getLeft() ;
-	public abstract void setLeft(INode node);
+	INode getLeft() ;
+	void setLeft(INode node);
 
-	public abstract INode getRight();
-	public abstract void setRight(INode node);
+	INode getRight();
+	void setRight(INode node);
 
-	public abstract boolean isLeaf();
+	boolean isLeaf();
 
 }

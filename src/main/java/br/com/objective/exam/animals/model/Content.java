@@ -9,7 +9,7 @@ package br.com.objective.exam.animals.model;
 
 public interface Content {
 
-    public abstract String getValue();
-    public abstract void setValue(String value);
+    String getValue();
+    void setValue(String value);
 
 }

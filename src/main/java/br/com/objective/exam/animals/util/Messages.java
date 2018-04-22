@@ -1,5 +1,6 @@
 package br.com.objective.exam.animals.util;
 
+import static br.com.objective.exam.animals.util.GlobalConstants.DEFAULT_LANGUAGE;
 import static java.text.MessageFormat.format;
 
 import java.util.MissingResourceException;
@@ -9,10 +10,10 @@ public final class Messages {
 
     private static final Messages INSTANCE = new Messages();
 
-    private ResourceBundle resourceBundle;
+    private final ResourceBundle resourceBundle;
 
     private Messages() {
-        resourceBundle = ResourceBundle.getBundle("languages/lang");
+        resourceBundle = ResourceBundle.getBundle(DEFAULT_LANGUAGE);
     }
 
     public static Messages getInstance() {
