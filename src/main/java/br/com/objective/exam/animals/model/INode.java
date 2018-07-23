@@ -9,8 +9,8 @@ package br.com.objective.exam.animals.model;
 
 public interface INode {
 
-	Content getContent();
-	void setContent(Content content);
+	IContent getContent();
+	void setContent(IContent content);
 
 	INode getLeft() ;
 	void setLeft(INode node);

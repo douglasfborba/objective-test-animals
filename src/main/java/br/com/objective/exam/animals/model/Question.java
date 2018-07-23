@@ -7,7 +7,7 @@ package br.com.objective.exam.animals.model;
  *
  */
 
-public class Question implements Content {
+public class Question implements IContent {
 
     private String question;
 

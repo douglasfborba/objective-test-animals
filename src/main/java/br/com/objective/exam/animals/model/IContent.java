@@ -7,7 +7,7 @@ package br.com.objective.exam.animals.model;
  *
  */
 
-public interface Content {
+public interface IContent {
 
     String getValue();
     void setValue(String value);
