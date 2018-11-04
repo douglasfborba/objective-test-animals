@@ -1,5 +1,12 @@
 package br.com.objective.exam.animals.util;
 
+/**
+ * 
+ * @author Douglas Borba
+ * @version 1.0
+ *
+ */
+
 public abstract class GlobalConstants {
 
     public static final String APP_TITLE = "app.title";

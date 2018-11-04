@@ -6,6 +6,13 @@ import static java.text.MessageFormat.format;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
+/**
+ * 
+ * @author Douglas Borba
+ * @version 1.0
+ *
+ */
+
 public final class Messages {
 
     private static final Messages INSTANCE = new Messages();

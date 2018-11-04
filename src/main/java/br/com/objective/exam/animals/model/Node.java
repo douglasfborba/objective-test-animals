@@ -3,7 +3,7 @@ package br.com.objective.exam.animals.model;
 /**
  * 
  * @author Douglas Borba
- * @version 2.0
+ * @version 3.0
  *
  */
 
@@ -11,19 +11,19 @@ package br.com.objective.exam.animals.model;
 
 	private INode left;
 	private INode right;
-	private IContent content;
+	private Content content;
 
-	public Node(IContent content) {
+	public Node(Content content) {
 		setContent(content);
 	}
 
 	@Override
-	public IContent getContent() {
+	public Content getContent() {
 		return content;
 	}
 
 	@Override
-	public void setContent(IContent content) {
+	public void setContent(Content content) {
 		this.content = content;
 	}
 

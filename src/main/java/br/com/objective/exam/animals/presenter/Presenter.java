@@ -80,7 +80,10 @@ public class Presenter implements ActionListener {
 		final String name = view.inputDialog(
 			messages.getMessage(DIALOG_TITLE_FAIL),
 			messages.getMessage(DIALOG_MESSAGE_INPUT_ANIMAL));
-
+	
+		if (name == null)
+			return;
+		
 		final String tip = view.inputDialog(
 			messages.getMessage(DIALOG_TITLE_COMPLETE),
 			messages.getMessage(DIALOG_MESSAGE_INPUT_COMPLETE, name, node.getContent().getValue()));

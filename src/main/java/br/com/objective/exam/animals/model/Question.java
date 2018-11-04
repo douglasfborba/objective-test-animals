@@ -3,26 +3,14 @@ package br.com.objective.exam.animals.model;
 /**
  * 
  * @author Douglas Borba
- * @version 2.0
+ * @version 3.0
  *
  */
 
-public class Question implements IContent {
+public class Question extends Content {
 
-    private String question;
-
-    public Question(String question) {
-        setValue(question);
-    }
-
-    @Override
-	public String getValue() {
-		return question;
-	}
-
-	@Override
-	public void setValue(String value) {
-		question = value;
+	public Question(String tip) {
+		super(tip);
 	}
 
 }
