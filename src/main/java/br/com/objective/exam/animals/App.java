@@ -1,9 +1,9 @@
 package br.com.objective.exam.animals;
 
-import br.com.objective.exam.animals.model.Animal;
-import br.com.objective.exam.animals.model.INode;
-import br.com.objective.exam.animals.model.Node;
-import br.com.objective.exam.animals.model.Question;
+import br.com.objective.exam.animals.model.impl.Animal;
+import br.com.objective.exam.animals.model.impl.Node;
+import br.com.objective.exam.animals.model.impl.Question;
+import br.com.objective.exam.animals.model.interfaces.INode;
 import br.com.objective.exam.animals.presenter.Presenter;
 import br.com.objective.exam.animals.view.View;
 

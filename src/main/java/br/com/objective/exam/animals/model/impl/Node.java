@@ -1,4 +1,7 @@
-package br.com.objective.exam.animals.model;
+package br.com.objective.exam.animals.model.impl;
+
+import br.com.objective.exam.animals.model.interfaces.IContent;
+import br.com.objective.exam.animals.model.interfaces.INode;
 
 /**
  * 
@@ -11,19 +14,19 @@ package br.com.objective.exam.animals.model;
 
 	private INode left;
 	private INode right;
-	private Content content;
+	private IContent content;
 
-	public Node(Content content) {
+	public Node(IContent content) {
 		setContent(content);
 	}
 
 	@Override
-	public Content getContent() {
+	public IContent getContent() {
 		return content;
 	}
 
 	@Override
-	public void setContent(Content content) {
+	public void setContent(IContent content) {
 		this.content = content;
 	}
 
